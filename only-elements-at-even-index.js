@@ -1,4 +1,5 @@
 // O(n) Time
+// O(n) Space
 
 function onlyElementsAtEvenIndex(array) {
   var newArray = Array(Math.ceil(array.length / 2));

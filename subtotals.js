@@ -1,4 +1,5 @@
 // O(n^2) Time
+// O(n) Space
 
 function subtotals(array) {
   var subtotalArray = Array(array.length);
