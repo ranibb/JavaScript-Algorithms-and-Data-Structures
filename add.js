@@ -54,7 +54,6 @@ function charCount(str) {
       result[char] = 1;
     }
   }
-    // if char is something else (space, period, etc.) don't do anything
   // return onject at end
   return result;
 }
