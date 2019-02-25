@@ -20,7 +20,6 @@ function same(arr1, arr2) {
   for (let val of arr1) {
     // For each element in the array, we're going to add one to the "Frequency Counter" if it's already in there OR we're going to initialize it to 1.
     frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1;
-    // console.log(frequencyCounter1[val]);
   }
   console.log(frequencyCounter1)
 
@@ -28,7 +27,6 @@ function same(arr1, arr2) {
   for (let val of arr2) {
     // For each element in the array, we're going to add one to the "Frequency Counter" if it's already in there OR we're going to initialize it to 1.
     frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;
-    // console.log(frequencyCounter2[val]);
   }
   console.log(frequencyCounter2)
 

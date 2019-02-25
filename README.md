@@ -1,6 +1,6 @@
 The Missing Computer Science and Coding Interview Bootcamp
 
-# Frequency Counter Pattern
+## Frequency Counter Pattern
 
 So, the idea behind the frequency counter, usually use an object and you use that object to construct a profile, sort of a way of breaking down the contents of an array or a string, Usually some sort of linear structure like an array or a string and then you're able to quickly compare that breakdown to how another object looks that was constructed from a string or an array.
 
