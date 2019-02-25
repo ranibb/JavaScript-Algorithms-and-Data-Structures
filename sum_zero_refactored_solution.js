@@ -9,7 +9,7 @@
  * sumZero([1,2,3]) // undefined
  */
 
-// Time Complexity - O(N2) |  Space Complexity - O(1)
+// Time Complexity - O(N) |  Space Complexity - O(1)
 function sumZero(arr) {
   let left = 0;
   let right = arr.length - 1;
