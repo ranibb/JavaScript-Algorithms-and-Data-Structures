@@ -38,7 +38,7 @@ function validAnagram(str1, str2) {
   console.log(frequencyCounter2);
 
   for (let key in frequencyCounter1) {
-    // Loop over the first array and we're going to look at each key if it has a corresponding key^2 in the second array
+    // Loop over the first array and we're going to look at each key if it has a corresponding key in the second array
     if (!(key in frequencyCounter2)) {
       return false
     }
