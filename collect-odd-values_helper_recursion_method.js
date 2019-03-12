@@ -1,6 +1,8 @@
 function collectOddValues(arr) {
-  let result = [];
 
+  let result = []; //external data structure
+
+  // nested function
   function helper(helperInput) {
     if (helperInput.length === 0) {
       return;
