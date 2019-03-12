@@ -21,3 +21,6 @@ A process (a function in our case) that calls itself.
 
 Invoke the same function with a different input until you reach your base case!
 
+## Helper method recursion
+
+Helper method recursion is a pattern where we have an outer function that;s not recursive which calls an inner function which is recursive
