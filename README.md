@@ -11,3 +11,7 @@ Branch 3: [Problem Solving Approach](https://github.com/ranibb/JavaScript-Algori
 Branch 4: [Problem Solving Patterns](https://github.com/ranibb/JavaScript-Algorithms-and-Data-Structures/tree/Problem-Solving-Patterns)
 
 Branch 5: [Recursion](https://github.com/ranibb/JavaScript-Algorithms-and-Data-Structures/tree/Recursion)
+
+Branch 6: [Searching Algorithms](https://github.com/ranibb/JavaScript-Algorithms-and-Data-Structures/tree/Searching-Algorithms)
+
+Branch 7: [Sorting Algorithms](https://github.com/ranibb/JavaScript-Algorithms-and-Data-Structures/tree/Sorting-Algorithms)
