@@ -1,13 +1,10 @@
 The Missing Computer Science and Coding Interview Bootcamp
 
-**Table of content**
+**Define our own basic sorts using built-in JavaScript's sort method**
 
-Branch 1: [Big O Notation](https://github.com/ranibb/JavaScript-Algorithms-and-Data-Structures/tree/Big-O-Notation)
-
-Branch 2: [Analyzing Performance of Arrays and-Objects](https://github.com/ranibb/JavaScript-Algorithms-and-Data-Structures/tree/Analyzing-Performance-of-Arrays-and-Objects)
-
-Branch 3: [Problem Solving Approach](https://github.com/ranibb/JavaScript-Algorithms-and-Data-Structures/tree/Problem-Solving-Approach)
-
-Branch 4: [Problem Solving Patterns](https://github.com/ranibb/JavaScript-Algorithms-and-Data-Structures/tree/Problem-Solving-Patterns)
-
-Branch 5: [Recursion](https://github.com/ranibb/JavaScript-Algorithms-and-Data-Structures/tree/Recursion)
+* The built-in sort method accepts an optional comparator function
+* You can use this comparator function to tell JavaScript how you want it to sort
+* The comparator looks at pairs of elements (a and b), determines their sort order based on the return value:
+    * If it returns a negative number, a should come before b
+    * If it returns a positive number, a should come after b,
+    * If it returns 0, a and b are the same as far as the sort is concerned
