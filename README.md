@@ -29,3 +29,7 @@ const swap = (arr, idx1, idx2) => {
   [arr[idx1],arr[idx2]] = [arr[idx2],arr[idx1]];
 }
 ```
+
+## Selection Sort
+
+Similar to bubble sort, but instead of first placing large values into sorted position, it places small values into sorted position.
