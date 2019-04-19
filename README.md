@@ -58,6 +58,8 @@ So, it works well in a situation where data is coming in live or streaming and y
 * Exploits the fact that arrays of 0 or 1 element are always sorted
 * Works by decomposing an array into smaller arrays of 0 or 1 elements, then building up a newly sorted array
 
+![Merge Sort Diagram](https://raw.githubusercontent.com/ranibb/JavaScript-Algorithms-and-Data-Structures/Sorting-Algorithms/diagrams/mergesort.png)
+
 | Time Complexity (Best) | Time Complexity (Average) | Time Complexity (Worst) | Space Complexity |
 | ---------------------- | ------------------------- | ----------------------- | ---------------- |
 | O(n log n)             | O(n log n)                | O(n log n)              | O(n)             |
