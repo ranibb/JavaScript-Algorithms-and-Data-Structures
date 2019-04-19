@@ -33,3 +33,13 @@ const swap = (arr, idx1, idx2) => {
 ## Selection Sort
 
 Similar to bubble sort, but instead of first placing large values into sorted position, it places small values into sorted position.
+
+## Insertion Sort
+
+Builds up the sort by gradually creating a larger left half which is always sorted.
+
+An interesting thing that insertion sort is good at, the so-called an online algorithm; which is an algorithm that can work as data is coming in as it receives new data.
+
+For example, we have some code where people are submitting numbers to us online live, we're getting them and we want to sort them in. With insertion sort because the way that it works that we're keeping one side of the array sorted and we're inserting items one at a time it doesn't matter what the number is that comes in, we can place it where it needs to go.
+
+So, it works well in a situation where data is coming in live or streaming and you need to insert it at moment's notice.
