@@ -43,3 +43,11 @@ An interesting thing that insertion sort is good at, the so-called an online alg
 For example, we have some code where people are submitting numbers to us online live, we're getting them and we want to sort them in. With insertion sort because the way that it works that we're keeping one side of the array sorted and we're inserting items one at a time it doesn't matter what the number is that comes in, we can place it where it needs to go.
 
 So, it works well in a situation where data is coming in live or streaming and you need to insert it at moment's notice.
+
+## Comparing Bubble, Selection, and Insertion Sort
+
+| Algorithm      | Time Complexity (Best) | Time Complexity (Average) | Time Complexity (Worst) | Space Complexity |
+| -------------- | ---------------------- | ------------------------- | ----------------------- | ---------------- |
+| Bubble Sort    | O(n)                   | O(n^2)                    | O(n^2)                  | O(1)             |
+| Insertion Sort | O(n)                   | O(n^2)                    | O(n^2)                  | O(1)             |
+| Selection Sort | O(n^2)                 | O(n^2)                    | O(n^2)                  | O(1)             |
