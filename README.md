@@ -75,3 +75,18 @@ So, it works well in a situation where data is coming in live or streaming and y
 | Time Complexity (Best) | Time Complexity (Average) | Time Complexity (Worst) | Space Complexity |
 | ---------------------- | ------------------------- | ----------------------- | ---------------- |
 | O(n log n)             | O(n log n)                | O(n^2)                  | O(log n)         |
+
+## Radix Sort
+* Radix sort is a special sorting algorithm that works on lists of numbers.
+* It never makes comparisons between elements!
+* It exploits the fact that information about the size of a number is encoded in the number of digits.
+* More digits means a bigger number!
+
+![Quick Sort Diagram](https://raw.githubusercontent.com/ranibb/JavaScript-Algorithms-and-Data-Structures/Sorting-Algorithms/diagrams/radixsort.png)
+
+| Time Complexity (Best) | Time Complexity (Average) | Time Complexity (Worst) | Space Complexity |
+| ---------------------- | ------------------------- | ----------------------- | ---------------- |
+| O(nk)                  | O(nk)                     | O(nk)                   | O(n + k)         |
+
+n - length of array
+k - number of digits(average)
