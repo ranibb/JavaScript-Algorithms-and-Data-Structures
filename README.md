@@ -15,3 +15,5 @@ Branch 5: [Recursion](https://github.com/ranibb/JavaScript-Algorithms-and-Data-S
 Branch 6: [Searching Algorithms](https://github.com/ranibb/JavaScript-Algorithms-and-Data-Structures/tree/Searching-Algorithms)
 
 Branch 7: [Sorting Algorithms](https://github.com/ranibb/JavaScript-Algorithms-and-Data-Structures/tree/Sorting-Algorithms)
+
+Branch 8: [Data Structure](https://github.com/ranibb/JavaScript-Algorithms-and-Data-Structures/tree/Data-Structure)
