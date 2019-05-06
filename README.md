@@ -156,3 +156,35 @@ class Point {
   }
 }
 ~~~
+
+### Singly Linked Lists
+
+* Singly Linked Lists are an excellent alternative to arrays when insertion and deletion at the beginning are frequently required
+* Arrays contain a built in index whereas Linked Lists do not
+* The idea of a list data structure that consists of nodes is the foundation for other data structures like Stacks and Queues
+
+**What is a linked List?**
+
+It's a data structure that stores whatever data you want strings or numbers. It's ordered. It contains a head, tail and length property. It's a list of data just like an array but there's a really big distinction. In an array, each item is mapped its index with a number. Linked Lists consist of nodes, each node has a value and a pointer to another node or null.
+
+A node consists of a bunch of nodes. A node stores a piece of data like a string or a number but it also references the next node or if it's at the very end, it references null.
+
+The head is the beginning of the linked list. The tail is the end. So, we don't keep track of every single item in the middle. We just keep track of the head and from the head we can figure out the next one. And from there we can figure out the next one all the way until the end. And then also we keep track of the length to make things easier.
+
+The terminology singly linked list comes from the fact that each node is only connected one directionally to the next node.
+
+To insert at the very beginning of a linked list, all what we have to do is make a new head and have it pointed to the old head, unlike array where every single item would have to be re-indexed to get a new position number.
+
+**Comparisons with Arrays**
+
+| Lists                                   | Arrays                                      |
+| ----------------------------------------| ------------------------------------------- |
+| Do not have indexes!                    | Indexed in order!                           |
+| Connected via nodes with a next pointer | Insertion and deletion can be expensive     |
+| Random access is not allowed            | Can quickly be accessed at a specific index |
+
+**Big O of Singly Linked List**
+* Insertion - O(1)
+* Removal - It depends.... O(1) or O(N)
+* Searching - O(N)
+* Access - O(N)
