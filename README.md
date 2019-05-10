@@ -188,3 +188,7 @@ To insert at the very beginning of a linked list, all what we have to do is make
 * Removal - It depends.... O(1) or O(N)
 * Searching - O(N)
 * Access - O(N)
+
+### Doubly Linked Lists
+
+Almost identical to Singly Linked Lists, except every node has another pointer, to the previous node!
