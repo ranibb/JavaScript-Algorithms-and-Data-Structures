@@ -44,6 +44,16 @@
  * 🔸 Return the list
  */
 
+/** Get Pseudocode
+ * 🔸 If the index is less than 0 or greater or equal to the length, return null
+ * 🔸 If the index is less than or equal to half the length of the list
+ *    ◻️ Loop through the list starting from the head and loop towards the middle
+ *    ◻️ Return the node once it is found
+ * 🔸 If the index is greater than half the length of the list
+ *    ◻️ Loop through the list starting from the tail and loop towards the middle
+ *    ◻️ Return the node once it is found
+ */
+
 class Node {
   constructor(val) {
     this.val = val;
@@ -112,6 +122,27 @@ class DoublyLinkedList {
     this.length++;
     return this;
   }
+  get(index) {
+    if (index < 0 || index >= this.length) return null;
+    if (index <= this.length / 2) {
+      console.log("Working from start");
+      var count = 0;
+      var current = this.head;
+      while (count != index) {
+        current = current.next;
+        count++;
+      }
+    } else {
+      console.log("Working from end");
+      var count = this.length - 1;
+      var current = this.tail;
+      while (count !== index) {
+        current = current.prev;
+        count--;
+      }
+    }
+    return current;
+  }
 
 }
 
@@ -124,6 +155,9 @@ list = new DoublyLinkedList();
 
 list.push(99);
 list.push(100);
+list.push(101);
+list.push(102);
+list.push(103);
 list.push("Last Item");
 // console.log(list);
 
@@ -133,10 +167,13 @@ list.push("Last Item");
 // list.shift();
 // console.log(list);
 
-list.unshift(98);
-list.pop();
-list.pop();
-list.pop();
-list.pop();
-list.unshift("97");
-console.log(list);
+// list.unshift(98);
+// list.pop();
+// list.pop();
+// list.pop();
+// list.pop();
+// list.unshift("97");
+// console.log(list);
+
+console.log(list.get(1));
+console.log(list.get(5));
