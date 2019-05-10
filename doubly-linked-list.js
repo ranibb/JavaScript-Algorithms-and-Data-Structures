@@ -8,6 +8,16 @@
  * 🔸 Return the Doubly Linked List
  */
 
+/** Popping pseudocode
+ * 🔸 If there is no head, return undefined
+ * 🔸 Store the current tail in a variable to return later
+ * 🔸 If the length is 1, set the head and tail to be null
+ * 🔸 Update the tail to be the previous Node.
+ * 🔸 Set the newTail's next to null
+ * 🔸 Decrement the length
+ * 🔸 Return the value removed
+ */
+
 class Node {
   constructor(val) {
     this.val = val;
@@ -35,6 +45,21 @@ class DoublyLinkedList {
     this.length++;
     return this;
   }
+  pop() {
+    if (!this.head) return undefined;
+    var poppedNode = this.tail;
+    if (this.length === 1) {
+      this.head = null;
+      this.tail = null;
+    } else {
+      this.tail = poppedNode.prev
+      this.tail.next = null;
+      poppedNode.prev = null;
+    }
+    this.length--;
+    return poppedNode;
+  }
+
 }
 
 // first = new Node(12);
@@ -47,5 +72,7 @@ list = new DoublyLinkedList();
 list.push(99);
 list.push(100);
 list.push("Last Item");
-console.log(list);
+// console.log(list);
 
+console.log(list.pop());
+console.log(list);
