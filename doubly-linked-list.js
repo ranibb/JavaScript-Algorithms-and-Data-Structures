@@ -71,6 +71,17 @@
  * 🔸 Return true
  */
 
+/** Remove pseudocode
+ * 🔸 If the index is less than zero or greater than or equal to the length return undefined
+ * 🔸 If the index is 0, shift
+ * 🔸 If the index is the same as the length-1, pop
+ * 🔸 Use the get method to retrieve the item to be removed
+ * 🔸 Update the next and prev properties to remove the found node from the list
+ * 🔸 Set next and prev to null on the found node
+ * 🔸 Decrement the length
+ * 🔸 Return the removed node.
+ */
+
 class Node {
   constructor(val) {
     this.val = val;
@@ -183,6 +194,23 @@ class DoublyLinkedList {
     this.length++;
     return true;
   }
+  remove(index) {
+    if (index < 0 || index >= this.length) return undefined;
+    if (index === 0) return this.shift();
+    if (index === this.length - 1) return this.pop();
+
+    var removedNode = this.get(index);
+    var beforeNode = removedNode.prev;
+    var afterNode = removedNode.next;
+    beforeNode.next = afterNode;
+    afterNode.prev = beforeNode;
+    // removedNode.prev.next = removedNode.next;
+    // removedNode.next.prev = removedNode.prev;
+    removedNode.next = null;
+    removedNode.prev = null;
+    this.length--;
+    return removedNode;
+  }
 
 }
 
@@ -221,8 +249,17 @@ list.push("Last Item");
 // console.log(list.set(0, 1000));
 // console.log(list);
 
-list.insert(0, "First");
-list.insert(7, "The Actually Last");
+// list.insert(0, "First");
+// list.insert(7, "The Actually Last");
 // console.log(list.insert(40, "some thing")); // returns false
-list.insert(1, "second")
+// list.insert(1, "second")
+// console.log(list);
+
+// list.remove(0);
+// list.remove(4);
+// console.log(list.remove(4));
+// console.log(list.remove(0));
+list.remove(1)
+// console.log(list.remove(-1)); // returns undefined
 console.log(list);
+// console.log(list.remove(4));
