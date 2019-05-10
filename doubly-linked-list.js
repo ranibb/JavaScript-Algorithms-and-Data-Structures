@@ -61,6 +61,16 @@
  * 🔸 Otherwise, return false
  */
 
+/** Insert pseudocode
+ * 🔸 If the index is less than zero or greater than or equal to the length return false
+ * 🔸 If the index is 0, unshift
+ * 🔸 If the index is the same as the length, push
+ * 🔸 Use the get method to access the index -1
+ * 🔸 Set the next and prev properties on the correct nodes to link everything together
+ * 🔸 Increment the length 
+ * 🔸 Return true
+ */
+
 class Node {
   constructor(val) {
     this.val = val;
@@ -158,6 +168,21 @@ class DoublyLinkedList {
     }
     return false;
   }
+  insert(index, val) {
+    if (index < 0 || index > this.length) return false;
+    if (index === 0) return !!this.unshift(val); // use !! to coerce it to boolean
+    if (index === this.length) return !!this.push(val); // use !! to coerce it to boolean
+
+    var newNode = new Node(val);
+    var beforeNode = this.get(index - 1);
+    var afterNode = this.get(index);
+    beforeNode.next = newNode;
+    newNode.prev = beforeNode;
+    newNode.next = afterNode;
+    afterNode.prev = newNode;
+    this.length++;
+    return true;
+  }
 
 }
 
@@ -193,5 +218,11 @@ list.push("Last Item");
 // console.log(list.get(1));
 // console.log(list.get(5));
 
-console.log(list.set(0, 1000));
+// console.log(list.set(0, 1000));
+// console.log(list);
+
+list.insert(0, "First");
+list.insert(7, "The Actually Last");
+// console.log(list.insert(40, "some thing")); // returns false
+list.insert(1, "second")
 console.log(list);
