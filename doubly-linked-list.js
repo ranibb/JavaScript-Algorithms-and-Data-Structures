@@ -31,6 +31,19 @@
  * 🔸 Return old head
  */
 
+/** Unshifting pseudocode
+ * 🔸 Create a new node with the value passed to the function
+ * 🔸 If the length is 0
+ *    ◻️ Set the head to be the new node
+ *    ◻️ Set the tail to be the new node
+ * 🔸 Otherwise
+ *    ◻️ Set the prev property on the head of the list to be the new node
+ *    ◻️ Set the next property on the new node to be the head property 
+ *    ◻️ Update the head to be the new node
+ * 🔸 Increment the length
+ * 🔸 Return the list
+ */
+
 class Node {
   constructor(val) {
     this.val = val;
@@ -86,6 +99,19 @@ class DoublyLinkedList {
     this.length--;
     return oldHead;
   }
+  unshift(val) {
+    var newNode = new Node(val);
+    if (this.length === 0) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.head.prev = newNode;
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+    this.length++;
+    return this;
+  }
 
 }
 
@@ -104,6 +130,13 @@ list.push("Last Item");
 // console.log(list.pop());
 // console.log(list);
 
-list.shift();
-console.log(list);
+// list.shift();
+// console.log(list);
 
+list.unshift(98);
+list.pop();
+list.pop();
+list.pop();
+list.pop();
+list.unshift("97");
+console.log(list);
