@@ -54,6 +54,13 @@
  *    ◻️ Return the node once it is found
  */
 
+/** Set pseudocode
+ * 🔸 Create a variable which is the result of the get method at the index passed to the function
+ *    ◻️ If the get method returns a valid node, set the value of that node to be the value passed to the function
+ *    ◻️ Return true
+ * 🔸 Otherwise, return false
+ */
+
 class Node {
   constructor(val) {
     this.val = val;
@@ -143,6 +150,14 @@ class DoublyLinkedList {
     }
     return current;
   }
+  set(index, val) {
+    var foundNode = this.get(index);
+    if (foundNode != null) {
+      foundNode.val = val;
+      return true;
+    }
+    return false;
+  }
 
 }
 
@@ -175,5 +190,8 @@ list.push("Last Item");
 // list.unshift("97");
 // console.log(list);
 
-console.log(list.get(1));
-console.log(list.get(5));
+// console.log(list.get(1));
+// console.log(list.get(5));
+
+console.log(list.set(0, 1000));
+console.log(list);
