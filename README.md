@@ -203,3 +203,27 @@ Almost identical to Singly Linked Lists, except every node has another pointer, 
 * Removal - O(1)
 * Searching - O(N) - Technically searching is O(N / 2), but that's still O(N)
 * Access - O(N)
+
+### Stacks + Queues
+
+Stacks and Queues are both data collections (an abstract/concept data structure):
+* A **Stack** needs to abide by a LIFO (Last In First Out) principle: The Last element added to the stack will be the first element removed from the stack.
+* A **Queue** needs to abide by a FIFO (First In First Out) principle.
+
+#### Stacks
+
+**Where stacks are used**
+* Stacks are used to handle function invocations (the call stack), for operations like undo/redo, and for routing (remember pages you have visited and go back/forward) and much more!
+* They are not a built-in data structure in JavaScript, but are relatively simple to implement
+* Insert and remove are both O(1)
+
+There is more than one way of implementing a stack:
+* Use an array and utilize it's push & pop methods, working with the end of the array, adding to the end and removing from the end.
+* Use an array and utilize unshift & shift methods, working with beginning of the array, adding to the beginning and removing from the beginning.
+* build our own stack class following the principles of a singly linked list. But note as stack should be constant time, we need to implement push and pop to add and remove from the beginning to avoid iterating over the entire list.
+
+**BIG O of STACKS**
+* Insertion - O(1)
+* Removal - O(1)
+* Searching - O(N) - not important to stack concept
+* Access - O(N) - not important to stack concept
