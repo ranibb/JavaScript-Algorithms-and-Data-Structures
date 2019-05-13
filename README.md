@@ -208,14 +208,13 @@ Almost identical to Singly Linked Lists, except every node has another pointer, 
 
 Stacks and Queues are both data collections (an abstract/concept data structure):
 * A **Stack** needs to abide by a LIFO (Last In First Out) principle: The Last element added to the stack will be the first element removed from the stack.
-* A **Queue** needs to abide by a FIFO (First In First Out) principle.
+* A **Queue** needs to abide by a FIFO (First In First Out) principleL The First element added to the queue will be the first element removed from the queue.
 
 #### Stacks
 
 **Where stacks are used**
 * Stacks are used to handle function invocations (the call stack), for operations like undo/redo, and for routing (remember pages you have visited and go back/forward) and much more!
 * They are not a built-in data structure in JavaScript, but are relatively simple to implement
-* Insert and remove are both O(1)
 
 There is more than one way of implementing a stack:
 * Use an array and utilize it's push & pop methods, working with the end of the array, adding to the end and removing from the end.
@@ -227,3 +226,24 @@ There is more than one way of implementing a stack:
 * Removal - O(1)
 * Searching - O(N) - not important to stack concept
 * Access - O(N) - not important to stack concept
+
+#### Queues
+
+**Where Queues are used**
+
+Queues are useful for processing tasks and are foundational for more complex data structures.
+
+* Background tasks
+* Uploading resources
+* Printing / Task processing
+
+There is more than one way of implementing a stack:
+* Use an array and utilize its push & shift methods.
+* Use an array and utilize its unshift & pop methods.
+* build our own queue class.
+
+**BIG O of QUEUES**
+* Insertion - O(1)
+* Removal - O(1)
+* Searching - O(N) - not important to queue concept
+* Access - O(N) - not important to queue concept
