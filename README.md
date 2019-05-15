@@ -294,3 +294,20 @@ It is a special case of the Binary Tree. They are sorted in a particular way, th
 As the number of node doubles, we only increase the number of steps by 1.
 * Insertion - O(log n) - NOT guaranteed!
 * Searching - O(log n) - NOT guaranteed!
+
+### Tree Traversal
+
+This is the idea of basically given any tree whether it's a binary search tree or just a plain binary tree that's unsorted or ternary tree or some other tree that has any number of nodes. There is no special order, just any tree.
+
+If we want to find a node, we would probably need to visit every single node in order to figure out that it's not there. We will focus on four very commonly known approaches:
+* Breadth-first Search
+* Depth-first Search
+  * InOrder
+  * PreOrder
+  * PostOrder
+
+Tree Traversal is independent of binary search trees. But we will be working with BST just so that we don't have to duplicate code and create a new tree class.
+
+#### Breadth-first Search
+
+Visit every node on the same level (working horizontally), every sibling node before we look at a child.
