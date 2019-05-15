@@ -247,3 +247,50 @@ There is more than one way of implementing a stack:
 * Removal - O(1)
 * Searching - O(N) - not important to queue concept
 * Access - O(N) - not important to queue concept
+
+### Binary Search Trees
+
+**What is a Tree?**
+
+A data structure that consists of nodes in a parent / child relationship. Unlike lists which are linear, its one thing and then the next then the next everything is in a line in a row, Trees are non-linear. Tress can branch to more than one pathway. In a doubly linked list, you could work backwards or forwards but still there is one line through our data structure.
+
+A node in a tree can only point to a child. We can't have a child pointing to parents neither to a sibling. Also, in a tree we can only have one root (one entry point).
+
+**Tree Terminology**
+* Root - The top node in a tree.
+* Child -A node directly connected to another node when moving away from the Root.
+* Parent - The converse notion of a child.
+* Siblings -A group of nodes with the same parent.
+* Leaf - A node with no children.
+* Edge - The connection between one node and another.
+
+#### Kinds of Trees
+
+**Trees**
+
+Lots of different applications!
+* HTML DOM
+* Network Routing
+* Abstract Syntax Tree
+* Artificial Intelligence
+* Folders in Operating Systems
+* Computer File Systems
+* JSON
+
+**Binary Trees**
+It has a special condition. Each node can have at most two children.
+
+**Binary Search Trees**
+
+It is a special case of the Binary Tree. They are sorted in a particular way, they are kept in order:
+* Every node to the left of a parent node is always less than the parent
+* Every node to the right of a parent node is always greater than the parent
+
+**Why BST is used?**
+* Fast to look things up
+* Easy to insert things (find a place for a node)
+
+**Big O of BST**
+As the number of node doubles, we only increase the number of steps by 1.
+* Insertion - O(log n) - NOT guaranteed!
+* Searching - O(log n) - NOT guaranteed!
