@@ -268,6 +268,8 @@ A node in a tree can only point to a child. We can't have a child pointing to pa
 
 **Trees**
 
+Trees are non-linear data structures that contain a root and child nodes. We can search through Trees using Breadth-first Search (BFS) and Depth-first Search (DFS).
+
 Lots of different applications!
 * HTML DOM
 * Network Routing
@@ -278,11 +280,11 @@ Lots of different applications!
 * JSON
 
 **Binary Trees**
-It has a special condition. Each node can have at most two children.
+Binary Trees can have values of any type, but at most two children for each parent.
 
 **Binary Search Trees**
 
-It is a special case of the Binary Tree. They are sorted in a particular way, they are kept in order:
+Binary Search Trees are a more specific version of binary trees. They are sorted in a particular way, they are kept in order:
 * Every node to the left of a parent node is always less than the parent
 * Every node to the right of a parent node is always greater than the parent
 
@@ -315,3 +317,15 @@ Visit every node on the same level (working horizontally), every sibling node be
 #### Depth-first Search
 
 There are three different orders (InOrder, PreOrder and PostOrder) with DFS and all of them pursue all nodes they visit or traverse vertically down to the end of the tree before visiting sibling nodes.
+
+#### When to use BFS and DFS
+
+Time complexity is the same - we are visiting every node once.
+
+space complexity depends on the structure of the tree:
+* If it's a really wide tree, BFS could store or take up a lot more space for that.
+* If it's a really deep long tree, then DFS could end up taking more space.
+
+Potential use cases for the different variants of DFS:
+* *InOrder* - Using InOrder on BST, the data we get back is in order, from lowest to highest.
+* *PreOrder* - could be useful if you want to clone or duplicate a tree or you want to store or flatten it out so you can store it in a file or a database and then recreate it from that serialized structure.
