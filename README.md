@@ -311,3 +311,7 @@ Tree Traversal is independent of binary search trees. But we will be working wit
 #### Breadth-first Search
 
 Visit every node on the same level (working horizontally), every sibling node before we look at a child.
+
+#### Depth-first Search
+
+There are three different orders (InOrder, PreOrder and PostOrder) with DFS and all of them pursue all nodes they visit or traverse vertically down to the end of the tree before visiting sibling nodes.
