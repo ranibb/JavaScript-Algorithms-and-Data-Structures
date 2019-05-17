@@ -257,14 +257,13 @@ A data structure that consists of nodes in a parent / child relationship. Unlike
 A node in a tree can only point to a child. We can't have a child pointing to parents neither to a sibling. Also, in a tree we can only have one root (one entry point).
 
 **Tree Terminology**
+
 * Root - The top node in a tree.
 * Child -A node directly connected to another node when moving away from the Root.
 * Parent - The converse notion of a child.
 * Siblings -A group of nodes with the same parent.
 * Leaf - A node with no children.
 * Edge - The connection between one node and another.
-
-#### Kinds of Trees
 
 **Trees**
 
@@ -280,6 +279,7 @@ Lots of different applications!
 * JSON
 
 **Binary Trees**
+
 Binary Trees can have values of any type, but at most two children for each parent.
 
 **Binary Search Trees**
@@ -289,15 +289,17 @@ Binary Search Trees are a more specific version of binary trees. They are sorted
 * Every node to the right of a parent node is always greater than the parent
 
 **Why BST is used?**
+
 * Fast to look things up
 * Easy to insert things (find a place for a node)
 
 **Big O of BST**
+
 As the number of node doubles, we only increase the number of steps by 1.
 * Insertion - O(log n) - NOT guaranteed!
 * Searching - O(log n) - NOT guaranteed!
 
-### Tree Traversal
+#### Tree Traversal
 
 This is the idea of basically given any tree whether it's a binary search tree or just a plain binary tree that's unsorted or ternary tree or some other tree that has any number of nodes. There is no special order, just any tree.
 
@@ -310,15 +312,15 @@ If we want to find a node, we would probably need to visit every single node in 
 
 Tree Traversal is independent of binary search trees. But we will be working with BST just so that we don't have to duplicate code and create a new tree class.
 
-#### Breadth-first Search
+**Breadth-first Search**
 
 Visit every node on the same level (working horizontally), every sibling node before we look at a child.
 
-#### Depth-first Search
+**Depth-first Search**
 
 There are three different orders (InOrder, PreOrder and PostOrder) with DFS and all of them pursue all nodes they visit or traverse vertically down to the end of the tree before visiting sibling nodes.
 
-#### When to use BFS and DFS
+**When to use BFS and DFS**
 
 Time complexity is the same - we are visiting every node once.
 
@@ -329,3 +331,22 @@ space complexity depends on the structure of the tree:
 Potential use cases for the different variants of DFS:
 * *InOrder* - Using InOrder on BST, the data we get back is in order, from lowest to highest.
 * *PreOrder* - could be useful if you want to clone or duplicate a tree or you want to store or flatten it out so you can store it in a file or a database and then recreate it from that serialized structure.
+
+### Binary Heaps
+
+Very similar to a binary search tree, but with some different rules! In a MaxBinaryHeap, parent nodes are always larger than child nodes. In a MinBinaryHeap, parent nodes are always smaller than child nodes.
+
+**MaxBinaryHeap**
+* Each parent has at most two child nodes
+* The value of each parent node is always greater than its child nodes
+* In a max Binary Heap the parent is greater than the children, but there are no guarantees between sibling nodes.
+* A binary heap is as compact as possible. All the children of each node are as full as they can be and left children are filled out first
+
+**Why do we need to know this?**
+* Binary Heaps are used to implement Priority Queues, which are very commonly used data structures
+* They are also used quite a bit, with graph traversal algorithms
+
+**Storing a Binary Heap**
+We could implement a tree class and a node class where each node has a left and a right and we could do the same thing we did for a binary search tree but there is an easier way. We can actually use a built-in data structure, an array or a list to store a binary heap.
+
+![Merge Sort Diagram](https://raw.githubusercontent.com/ranibb/JavaScript-Algorithms-and-Data-Structures/Data-Structure/diagrams/max-binary-heap.jpg)
