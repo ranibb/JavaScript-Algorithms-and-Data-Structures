@@ -350,3 +350,6 @@ Very similar to a binary search tree, but with some different rules! In a MaxBin
 We could implement a tree class and a node class where each node has a left and a right and we could do the same thing we did for a binary search tree but there is an easier way. We can actually use a built-in data structure, an array or a list to store a binary heap.
 
 ![Merge Sort Diagram](https://raw.githubusercontent.com/ranibb/JavaScript-Algorithms-and-Data-Structures/Data-Structure/diagrams/max-binary-heap.jpg)
+
+**SINK DOWN?**
+The procedure for deleting the root from the heap (effectively extracting the maximum element in a max-heap or the minimum element in a min-heap) and restoring the properties is called down-heap (also known as bubble-down, percolate-down, sift-down, trickle down, heapify-down, cascade-down, and extract-min/max).
