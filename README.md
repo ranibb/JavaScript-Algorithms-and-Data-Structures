@@ -7,6 +7,7 @@ Data structures are collections of values, the relationships among them, and the
 Different data structures excel at different things. Some are highly specialized, while others (like arrays) are more generally used.
 
 **To name a few, we have:**
+
 * Singly Linked Lists
 * Doubly Linked Lists
 * Stacks
@@ -19,6 +20,7 @@ Different data structures excel at different things. Some are highly specialized
 * Directed Graphs
 
 **Possible use cases (examples):**
+
 * *Working with map/location data?* You are writing a code that will route you to the nearest gas station that has the cheapest deals. For that, you might want to use a graph data structure because it would be very difficult to represent a map using a single array.
 
 * *Need an ordered list with fast inserts/removals at the beginning and end?* Maybe you have a huge data set and you have to have it ordered and you are always inserting and removing from both ends. For that, you might want to use a linked list because Arrays do not do well when you insert at the beginning or remove from the beginning, everything has to be indexed.
@@ -36,11 +38,13 @@ Different data structures excel at different things. Some are highly specialized
 * Class methods can be added using the static keyword
 
 **What is a class?**
+
 A blueprint for creating objects with pre-defined properties and methods. For example, we could define a pattern for a doubly linked list but then we can actually instantiate many objects (many individual linked lists) using that blueprint.
 
 #### The Syntax
 
 **The constructor method**
+
 ~~~JavaScript
 class Student {
   constructor(firstName, lastName, year) {
@@ -53,6 +57,7 @@ class Student {
 let firstStudent = new Student("Colt", "Steele");
 let secondStudent = new Student("Blue", "Steele");
 ~~~
+
 The method to create new objects must be called constructor method. We are not explicitly calling the constrictor. we are not saying `student.constructor`, there's some magic behind the scenes, some syntactic sugar that we use the `new` keyword, but the constructor method is going to be executed or data will basically be patched on through and our constructor will run when we instantiate a new student or whatever our class is. 
 
 The class keyword creates a constant, so you cannot redefine it. Watch out for the syntax as well!
@@ -199,6 +204,7 @@ Almost identical to Singly Linked Lists, except every node has another pointer, 
 * Doubly linked lists are used to implement other data structures and certain types of caches
 
 **Big O of Doubly Linked Lists**
+
 * Insertion - O(1)
 * Removal - O(1)
 * Searching - O(N) - Technically searching is O(N / 2), but that's still O(N)
@@ -213,6 +219,7 @@ Stacks and Queues are both data collections (an abstract/concept data structure)
 #### Stacks
 
 **Where stacks are used**
+
 * Stacks are used to handle function invocations (the call stack), for operations like undo/redo, and for routing (remember pages you have visited and go back/forward) and much more!
 * They are not a built-in data structure in JavaScript, but are relatively simple to implement
 
@@ -243,6 +250,7 @@ There is more than one way of implementing a stack:
 * build our own queue class.
 
 **BIG O of QUEUES**
+
 * Insertion - O(1)
 * Removal - O(1)
 * Searching - O(N) - not important to queue concept
@@ -337,19 +345,31 @@ Potential use cases for the different variants of DFS:
 Very similar to a binary search tree, but with some different rules! In a MaxBinaryHeap, parent nodes are always larger than child nodes. In a MinBinaryHeap, parent nodes are always smaller than child nodes.
 
 **MaxBinaryHeap**
+
 * Each parent has at most two child nodes
 * The value of each parent node is always greater than its child nodes
 * In a max Binary Heap the parent is greater than the children, but there are no guarantees between sibling nodes.
 * A binary heap is as compact as possible. All the children of each node are as full as they can be and left children are filled out first
 
 **Why do we need to know this?**
+
 * Binary Heaps are used to implement Priority Queues, which are very commonly used data structures
 * They are also used quite a bit, with graph traversal algorithms
 
 **Storing a Binary Heap**
+
 We could implement a tree class and a node class where each node has a left and a right and we could do the same thing we did for a binary search tree but there is an easier way. We can actually use a built-in data structure, an array or a list to store a binary heap.
 
 ![Merge Sort Diagram](https://raw.githubusercontent.com/ranibb/JavaScript-Algorithms-and-Data-Structures/Data-Structure/diagrams/max-binary-heap.jpg)
 
 **SINK DOWN?**
+
 The procedure for deleting the root from the heap (effectively extracting the maximum element in a max-heap or the minimum element in a min-heap) and restoring the properties is called down-heap (also known as bubble-down, percolate-down, sift-down, trickle down, heapify-down, cascade-down, and extract-min/max).
+
+### Priority Queues
+
+A data structure where each element has a priority. Elements with higher priorities are served before elements with lower priorities. Just like in an emergency room at a hospital, you have a bunch of people waiting, everybody is assigned internally at least some sort of priority level and then a nurse or doctor comes out and retrieves one person at a time based off of that priority level.
+
+A priority queue is an abstract concept that is commonly done with a heap. It could be done naively with a list or array where you would have to iterate over the entire thing to find the highest priority element.
+
+The actual algorithm for a priority queue, the comparison itself, will likely to change. In the real world, it might be priority level Plus how many resources it takes up or how resource intensive it is Plus how long it spent waiting. These different things might impact the comparison rather than just direct priority versus priority.
