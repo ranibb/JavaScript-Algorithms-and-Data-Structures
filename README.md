@@ -373,3 +373,13 @@ A data structure where each element has a priority. Elements with higher priorit
 A priority queue is an abstract concept that is commonly done with a heap. It could be done naively with a list or array where you would have to iterate over the entire thing to find the highest priority element.
 
 The actual algorithm for a priority queue, the comparison itself, will likely to change. In the real world, it might be priority level Plus how many resources it takes up or how resource intensive it is Plus how long it spent waiting. These different things might impact the comparison rather than just direct priority versus priority.
+
+### Big O of Binary Heaps
+
+(For 16 Elements....4 comparisons) 2^y = 16. Every time we double the number of nodes, every new full complete layer, we are only increasing the time that it takes by one. It is the same for removal.
+
+Binary heaps are not meant to be searchable.
+
+* Insertion - O(log N) 
+* Removal - O(log N)
+* Search - O(N)
