@@ -366,7 +366,7 @@ We could implement a tree class and a node class where each node has a left and 
 
 The procedure for deleting the root from the heap (effectively extracting the maximum element in a max-heap or the minimum element in a min-heap) and restoring the properties is called down-heap (also known as bubble-down, percolate-down, sift-down, trickle down, heapify-down, cascade-down, and extract-min/max).
 
-### Priority Queues
+#### Priority Queues
 
 A data structure where each element has a priority. Elements with higher priorities are served before elements with lower priorities. Just like in an emergency room at a hospital, you have a bunch of people waiting, everybody is assigned internally at least some sort of priority level and then a nurse or doctor comes out and retrieves one person at a time based off of that priority level.
 
@@ -374,7 +374,7 @@ A priority queue is an abstract concept that is commonly done with a heap. It co
 
 The actual algorithm for a priority queue, the comparison itself, will likely to change. In the real world, it might be priority level Plus how many resources it takes up or how resource intensive it is Plus how long it spent waiting. These different things might impact the comparison rather than just direct priority versus priority.
 
-### Big O of Binary Heaps
+#### Big O of Binary Heaps
 
 (For 16 Elements....4 comparisons) 2^y = 16. Every time we double the number of nodes, every new full complete layer, we are only increasing the time that it takes by one. It is the same for removal.
 
@@ -383,3 +383,68 @@ Binary heaps are not meant to be searchable.
 * Insertion - O(log N) 
 * Removal - O(log N)
 * Search - O(N)
+
+### Hash Tables
+
+Hash tables are used to store **key-value pairs** (**key-value data stores**). They are like arrays, but the keys are not ordered. Unlike arrays, hash tables are fast for all of the following operations: finding values, adding new values, and removing values!
+
+Nearly every programming language has some sort of hash table data structure. Because of their speed, hash tables are very commonly used!
+
+**Hash Tables in the wild**
+
+* *Python* has *Dictionaries*
+* *JS* has *Objects* and *Maps*/*
+* *Java*, *Go*, & *Scala* have *Maps*
+* *Ruby* has *Hashes*
+
+*/Objects have some restrictions, but are basically hash tables.
+
+#### Implementing our own version of key-value data stores, a Hash Table.
+
+**Introductory Example**
+
+Imagine we want to store some colors, we could just use an array/list: `[ "#ff69b4","#ff4500","#00ffff" ]`, but there is an order here that's implicit and there's no reason we'd want to store them in a particular order unless for example we just need a random color at any point. But if we need particular colors at a particular moment, it would be much better to use human readable keys like pink ---> #ff69b4, orange ---> #ff4500, cyan ---> #00ffff. So saying `colors["cyan"]` is better than saying `colors[2]`. So we are going to implement this structure on our own even though you would be able to do this out of the box in JavaScript.
+
+note: In a Hash Table, it doesn’t have to be a string, it could be any piece of data such as Boolean, array, image, pdf, video. But we are going to focus on string to narrow down some of the complexity.
+
+To implement a hash table, we'll be using an array. A way of storing information where we have to use numbers.
+
+In order to look up values by key, we need a way to convert keys into valid array indices. A function that performs this task is called a hash function or hashing function.
+
+There are very intense teams, multi-country efforts of people, working on hash functions because they have a lot of applications in security and cryptography. But what we're talking about here going to be very simple and limited in scope of hash functions.
+
+The idea here in our simple example is that if we pass in a string "pink" to our array of 10 slots, the hash function needs to give us some number between 0 and 9. And every time we pass "pink", it should give us the same number. Now if you are asking what's an index "pink", we would pass pink to the hashing function and retrieve the index that was given earlier.
+
+So, we will be using hash functions to convert keys and turn that into a valid array index.
+
+**The basic defention of a basic Hash Function**
+
+It’s just a function that takes data of arbitrary size whether it's a thousand characters or a million characters and it's going to spit out data of a fixed size. It's going to map an input to an output of a fixed size.
+
+**What makes a good Hash?** (not a cryptographically secure one)
+
+1. Fast (i.e. constant time)
+2. Doesn't cluster outputs at specific indices, but distributes uniformly
+3. Deterministic (same input yields same output)
+
+**Writing our First Hash Function**
+
+There are many ways to convert a string to a number but it needs to be reliable, Deterministic meaning that is reproducible, every time we get the same output.
+
+One way is to use the underlying UTF-16 character codes for each character. Every character has a numeric value associated with it. The way to access that as the following example:
+
+~~~JavaScript
+console.log("a".charCodeAt(0)); // 97
+console.log("hi".charCodeAt(0)); // 104
+console.log("hi".charCodeAt(1)); // 105
+~~~
+
+If you subtract `96`, this will give us the alphabetic ranking or position:
+
+~~~JavaScript
+console.log("a".charCodeAt(0) - 96); // 1
+console.log("hi".charCodeAt(0) - 96); // 8
+console.log("hi".charCodeAt(1) - 96); // 9
+~~~
+
+So, we will do this for every character in a string and add the total together. So, suppose that you do this for the string "hello" which yields 52. Passing this number to a hash function with a length of 11 for an array, should store the string in a valid index. Since 52 is greater than 11, we could keep it within these bounds using modulo %, divide a number by a certain number and then you take the reminder, that’s what you store. So, 52 % 11 = 8.
