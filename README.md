@@ -448,3 +448,17 @@ console.log("hi".charCodeAt(1) - 96); // 9
 ~~~
 
 So, we will do this for every character in a string and add the total together. So, suppose that you do this for the string "hello" which yields 52. Passing this number to a hash function with a length of 11 for an array, should store the string in a valid index. Since 52 is greater than 11, we could keep it within these bounds using modulo %, divide a number by a certain number and then you take the reminder, that’s what you store. So, 52 % 11 = 8.
+
+**Dealing with Collisions**
+
+Even with a large array and a great hash function, collisions are inevitable. There are many strategies for dealing with collisions, but we'll focus on two:
+1. Separate Chaining
+2. Linear Probing
+
+With **separate chaining**, at each index in our array we store values using a more sophisticated data structure (e.g. an array or a linked list). This allows us to store multiple key-value pairs at the same index.
+
+![Separate Chaining](https://raw.githubusercontent.com/ranibb/JavaScript-Algorithms-and-Data-Structures/Data-Structure/diagrams/separate-chaining.jpg)
+
+With **linear probing**, when we find a collision, we search through the array to find the next empty slot. Unlike with separate chaining, this allows us to store a single key-value at each index.
+
+![Linear Probing](https://raw.githubusercontent.com/ranibb/JavaScript-Algorithms-and-Data-Structures/Data-Structure/diagrams/linear-probing.jpg)
