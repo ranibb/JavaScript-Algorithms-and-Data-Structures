@@ -109,3 +109,7 @@ console.log(ht.get("plum")); // #DDA0DD
 console.log(ht.values());
 
 console.log(ht.keys());
+
+ht.set("plum", "DOUBLE!!")
+console.log(ht); // both plum keys and values are storetd at index 0
+console.log(ht.get("plum")); // gets the first key-value pairs
