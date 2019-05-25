@@ -113,3 +113,14 @@ console.log(ht.keys());
 ht.set("plum", "DOUBLE!!")
 console.log(ht); // both plum keys and values are storetd at index 0
 console.log(ht.get("plum")); // gets the first key-value pairs
+
+
+/** 
+ * In most languages, if you try to insert something multiple times, it would overwrite what
+ * you already had.
+ */
+
+// In case we want to print out every single color, we could do some thing like this:
+ht.keys().forEach(function(key) {
+  console.log(ht.get(key));
+})

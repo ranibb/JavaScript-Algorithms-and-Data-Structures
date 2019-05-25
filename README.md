@@ -386,7 +386,7 @@ Binary heaps are not meant to be searchable.
 
 ### Hash Tables
 
-Hash tables are used to store **key-value pairs** (**key-value data stores**). They are like arrays, but the keys are not ordered. Unlike arrays, hash tables are fast for all of the following operations: finding values, adding new values, and removing values!
+Hash tables are used to store **key-value pairs** (**key-value data stores**). They are like arrays, but the keys are not ordered. Unlike arrays, hash tables are fast for all of the following operations: find values quickly given a key, add new key-values quickly, and removing values!
 
 Nearly every programming language has some sort of hash table data structure. Because of their speed, hash tables are very commonly used!
 
@@ -462,3 +462,9 @@ With **separate chaining**, at each index in our array we store values using a m
 With **linear probing**, when we find a collision, we search through the array to find the next empty slot. Unlike with separate chaining, this allows us to store a single key-value at each index.
 
 ![Linear Probing](https://raw.githubusercontent.com/ranibb/JavaScript-Algorithms-and-Data-Structures/Data-Structure/diagrams/linear-probing.jpg)
+
+**Hash Table Big O Complexity** (average case)
+
+* Insert: O(1)
+* Deletion: O(1)
+* Access: O(1)
