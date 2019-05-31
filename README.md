@@ -468,3 +468,79 @@ With **linear probing**, when we find a collision, we search through the array t
 * Insert: O(1)
 * Deletion: O(1)
 * Access: O(1)
+
+ ### Graphs
+
+A graph data structure consists of a finite (and possibly mutable) set of vertices or nodes or points, together with a set of unordered pairs of these vertices for an undirected graph or a set of ordered pairs for a directed graph.
+
+**USES FOR GRAPHS**
+
+* Social Networks
+* Location / Mapping
+* Recommendations
+* Routing Algorithms
+* Visual Hierarchy
+* File System Optimizations
+* EVERYWHERE!
+
+**Essential Graph Terms**
+
+* **Vertex** - a node
+* **Edge** - connection between nodes
+* **Weighted/Unweighted** - values assigned to distances between vertices
+* **Directed/Undirected** - directions assigned to distanced between vertices
+
+#### Storing Graphs
+
+The following is a graph of a small subset of Wikipedia pages. Each vertex is a page or an article on Wikipedia and each edge (connection) represents a link or a cross-reference.
+
+| ![Visualization of wiki structure using prefuse visualization package](https://raw.githubusercontent.com/ranibb/JavaScript-Algorithms-and-Data-Structures/Data-Structure/diagrams/Visualization_of_wiki_structure_using_prefuse_visualization_package.jpg) | 
+|:--:| 
+| *From Wikimedia Commons, the free media repository* |
+
+To store this graph in code, there are two common ideas: the **adjacency matrix** and the **adjacency list**.
+
+**Adjacency Matrix:**
+
+A matrix is just a two-dimensional structure usually implemented with nested arrays but not always. And basically, we store information in rows and columns.
+
+In Adjacency matrix, every time we add a new node (vertex), we have to add an entire new row and entire new column.
+
+![Adjacency matrix Undirected](https://raw.githubusercontent.com/ranibb/JavaScript-Algorithms-and-Data-Structures/Data-Structure/diagrams/Adjacency-matrix-Undirected.jpg)
+
+**Adjacency List:**
+
+In Adjacency list, we use an array or a list to store the edges.
+
+If we are talking about numbers, the following hinges on using the positions of an array.
+
+![Adjacency list Undirected using array](https://raw.githubusercontent.com/ranibb/JavaScript-Algorithms-and-Data-Structures/Data-Structure/diagrams/Adjacency-list-Undirected-using-array.jpg)
+
+If we are taking about letters or strings or something else that isn't just a number and not in order, we could use a hash table.
+
+![Adjacency list Undirected using a hash table](https://raw.githubusercontent.com/ranibb/JavaScript-Algorithms-and-Data-Structures/Data-Structure/diagrams/Adjacency-list-Undirected-using-a-hash-table.jpg)
+
+**Adjacency Matrix Vs. List BIG O**
+
+* |V| - number of vertices
+* |E| - number of edges
+
+| OPERATION     | ADJACENCY LIST | ADJACENCY MATRIX |
+| ------------- | -------------- | ---------------- |
+| Add Vertex    | O(1)           | O(|V^2|)         |
+| Add Edge      | O(1)           | O(1)             |
+| Remove Vertex | O(|V| + |E|)   | O(|V^2|)         |
+| Remove Edge   | O(|E|)         | O(1)             |
+| Query         | O(|V| + |E|)   | O(1)             |
+| Storage       | O(|V| + |E|)   | O(|V^2|)         |
+
+| ADJACENCY LIST                            | ADJACENCY MATRIX                       |
+| ----------------------------------------- | -------------------------------------- |
+| Can take up less space (in sparse graphs) | Takes up more space (in sparse graphs) |
+| Faster to iterate over all edges          | Slower to iterate over all edges       |
+| Can be slower to lookup specific edge     | Faster to lookup specific edge         |
+
+**What will we use?**
+
+* Adjacency List takes up less space.
+* Most data in the real-world tends to lend itself to sparser and/or larger graphs, so we can have ton of nodes, lots of vertices but usually they're not all connected and that lends itself more to adjacency list.
