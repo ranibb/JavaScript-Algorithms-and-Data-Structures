@@ -469,7 +469,7 @@ With **linear probing**, when we find a collision, we search through the array t
 * Deletion: O(1)
 * Access: O(1)
 
- ### Graphs
+### Graphs
 
 A graph data structure consists of a finite (and possibly mutable) set of vertices or nodes or points, together with a set of unordered pairs of these vertices for an undirected graph or a set of ordered pairs for a directed graph.
 
@@ -544,3 +544,23 @@ If we are taking about letters or strings or something else that isn't just a nu
 
 * Adjacency List takes up less space.
 * Most data in the real-world tends to lend itself to sparser and/or larger graphs, so we can have ton of nodes, lots of vertices but usually they're not all connected and that lends itself more to adjacency list.
+
+### Graph Traversal (Visiting/Updating/Checking each vertex in a graph)
+
+**Graph Traversal Uses**
+
+* Peer to peer networking
+* Web crawlers
+* Finding "closest" matches/recommendations
+* Shortest path problems
+  * GPS Navigation
+  * Solving mazes
+  * AI (shortest path to win the game)
+
+#### Depth First Graph Traversal
+
+When we say Depth First for a binary search tree or any tree, it means that we're prioritizing visiting children of a given node before we visit siblings or we deepen the traversal before we widen it. Whether we're going left or right first doesn't really matter.
+
+When we're talking about graphs that are not trees they can be a little trickier to understand what depth means versus breath, because it's easy on a tree where we have a clear direction down or it depends you know how it's drawn sometimes you see trees drawn upwards from the root, there is clear path through that tree. There's one root and you descend away or you ascend moving away from that root.
+
+The basic idea of depth first traversal in a graph, we follow a branch down, following the neighbors and continuing to follow the neighbors before backtrack.
