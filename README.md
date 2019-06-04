@@ -564,3 +564,11 @@ When we say Depth First for a binary search tree or any tree, it means that we'r
 When we're talking about graphs that are not trees they can be a little trickier to understand what depth means versus breath, because it's easy on a tree where we have a clear direction down or it depends you know how it's drawn sometimes you see trees drawn upwards from the root, there is clear path through that tree. There's one root and you descend away or you ascend moving away from that root.
 
 The basic idea of depth first traversal in a graph, we follow a branch down, following the neighbors and continuing to follow the neighbors before backtrack.
+
+#### Breadth First Graph Traversal
+
+Breadth first priorities visiting all of the neighbors at a given depth before moving downwards or visiting neighbors of neighbors.
+
+With a tree, it's easier to talk about because we can just say horizontal before vertical (before descending down). With a graph, it's a little more complicated but we can still talk about depth. There are layers (levels) it's actually called height.
+
+So, we are going to visit all of the things on the same height (horizontally) before we visit their neighbors.
