@@ -583,4 +583,15 @@ When working with weighted and directed/undirected graphs, we very commonly want
 * Airline tickets - finding cheapest route to your destination
 * Many other uses!
 
-In order to find the shortest in a graph between two points, we need to assign values between those points (Weighted Graph) so we can find any path short or long.
+Of course, in a real-world application you would calculate the weight based on many factors. For example, Google Map would get you the Shortest path not only based on distance but also the capacity of a road, number of lanes, traffic accidents, time of the day, holidays, etc.
+
+In our simple application, in order to find the shortest path in a graph between two points, we need to assign values between those points (Weighted Graph) so we can find any path short or long.
+
+![weighted and directed/undirected graph](https://raw.githubusercontent.com/ranibb/JavaScript-Algorithms-and-Data-Structures/Data-Structure/diagrams/graph.jpg)
+
+**The Approach**
+
+1. Every time we look to visit a new node, we pick the node with the smallest known distance to visit first.
+2. Once we’ve moved to the node we’re going to visit; we look at each of its neighbors
+3. For each neighboring node, we calculate the distance by summing the total edges that lead to the node we’re checking from the starting node.
+4. If the new total distance to a node is less than the previous total, we store the new shorter distance for that node.
