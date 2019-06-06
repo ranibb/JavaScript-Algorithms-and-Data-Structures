@@ -572,3 +572,15 @@ Breadth first priorities visiting all of the neighbors at a given depth before m
 With a tree, it's easier to talk about because we can just say horizontal before vertical (before descending down). With a graph, it's a little more complicated but we can still talk about depth. There are layers (levels) it's actually called height.
 
 So, we are going to visit all of the things on the same height (horizontally) before we visit their neighbors.
+
+### Dijkstra's Algorithm (Shortest Path Algorithms)
+
+When working with weighted and directed/undirected graphs, we very commonly want to know how to get from one vertex to another! Better yet, how to do it quickly.
+
+* GPS - finding fastest route
+* Network Routing - finds open shortest path for data
+* Biology - used to model the spread of viruses among humans
+* Airline tickets - finding cheapest route to your destination
+* Many other uses!
+
+In order to find the shortest in a graph between two points, we need to assign values between those points (Weighted Graph) so we can find any path short or long.
