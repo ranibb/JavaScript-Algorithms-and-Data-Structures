@@ -473,6 +473,11 @@ With **linear probing**, when we find a collision, we search through the array t
 
 A graph data structure consists of a finite (and possibly mutable) set of vertices or nodes or points, together with a set of unordered pairs of these vertices for an undirected graph or a set of ordered pairs for a directed graph.
 
+* Graphs are collections of vertices connected by edges.
+* Graphs can be represented using adjacency lists, adjacency matrices and quite a few other forms.
+* Graphs can contain weights and directions as well as cycles.
+* Just like trees, graphs can be traversed using BFS and DFS.
+
 **USES FOR GRAPHS**
 
 * Social Networks
